@@ -10,6 +10,9 @@ dioxus-mobile-geolocation = { git = "https://github.com/wheregmis/mobile-geoloca
     "location-fine",
 ] }
 
+[target.'cfg(target_family = "wasm")'.dependencies]
+gloo-timers = { version = "0.3", features = ["futures"] }
+
 [features]
 default = ["mobile"]
 server = ["dioxus/server"]

@@ -510,7 +510,7 @@ dependencies = [
 [[package]]
 name = "const-serialize"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize-macro",
  "serde",
@@ -519,7 +519,7 @@ dependencies = [
 [[package]]
 name = "const-serialize-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -841,7 +841,7 @@ dependencies = [
 [[package]]
 name = "dioxus"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-asset-resolver",
  "dioxus-cli-config",
@@ -872,7 +872,7 @@ dependencies = [
 [[package]]
 name = "dioxus-asset-resolver"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-cli-config",
  "http",
@@ -893,7 +893,7 @@ dependencies = [
 [[package]]
 name = "dioxus-cli-config"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "wasm-bindgen",
 ]
@@ -901,7 +901,7 @@ dependencies = [
 [[package]]
 name = "dioxus-config-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -910,12 +910,12 @@ dependencies = [
 [[package]]
 name = "dioxus-config-macros"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 
 [[package]]
 name = "dioxus-core"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "anyhow",
  "const_format",
@@ -937,7 +937,7 @@ dependencies = [
 [[package]]
 name = "dioxus-core-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "convert_case 0.8.0",
  "dioxus-rsx",
@@ -949,12 +949,12 @@ dependencies = [
 [[package]]
 name = "dioxus-core-types"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 
 [[package]]
 name = "dioxus-desktop"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "async-trait",
  "base64",
@@ -1008,7 +1008,7 @@ dependencies = [
 [[package]]
 name = "dioxus-devtools"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-cli-config",
  "dioxus-core",
@@ -1028,7 +1028,7 @@ dependencies = [
 [[package]]
 name = "dioxus-devtools-types"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "serde",
@@ -1038,7 +1038,7 @@ dependencies = [
 [[package]]
 name = "dioxus-document"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "dioxus-core-macro",
@@ -1056,7 +1056,7 @@ dependencies = [
 [[package]]
 name = "dioxus-fullstack"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "anyhow",
  "async-stream",
@@ -1120,7 +1120,7 @@ dependencies = [
 [[package]]
 name = "dioxus-fullstack-core"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "anyhow",
  "axum-core",
@@ -1145,7 +1145,7 @@ dependencies = [
 [[package]]
 name = "dioxus-fullstack-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const_format",
  "convert_case 0.8.0",
@@ -1158,7 +1158,7 @@ dependencies = [
 [[package]]
 name = "dioxus-history"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "tracing",
@@ -1167,7 +1167,7 @@ dependencies = [
 [[package]]
 name = "dioxus-hooks"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "dioxus-signals",
@@ -1183,7 +1183,7 @@ dependencies = [
 [[package]]
 name = "dioxus-html"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "async-trait",
  "bytes",
@@ -1209,7 +1209,7 @@ dependencies = [
 [[package]]
 name = "dioxus-html-internal-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "convert_case 0.8.0",
  "proc-macro2",
@@ -1220,7 +1220,7 @@ dependencies = [
 [[package]]
 name = "dioxus-interpreter-js"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "dioxus-core-types",
@@ -1239,7 +1239,7 @@ dependencies = [
 [[package]]
 name = "dioxus-liveview"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "axum",
  "dioxus-cli-config",
@@ -1266,7 +1266,7 @@ dependencies = [
 [[package]]
 name = "dioxus-logger"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-cli-config",
  "tracing",
@@ -1277,23 +1277,26 @@ dependencies = [
 [[package]]
 name = "dioxus-mobile-geolocation"
 version = "0.1.0"
-source = "git+https://github.com/wheregmis/mobile-geolocation.git#5e1b510e1a79d3544c12ed8ac978a77ac61725be"
+source = "git+https://github.com/wheregmis/mobile-geolocation.git#4510eb6536f273fe15041dc9ae7a2d865b51231e"
 dependencies = [
  "cfg-if",
  "const-serialize",
  "dioxus-platform-bridge",
  "jni",
+ "js-sys",
  "ndk-context",
  "objc2",
  "objc2-core-location",
  "permissions",
  "permissions-core",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]
 name = "dioxus-platform-bridge"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "const-serialize-macro",
@@ -1307,7 +1310,7 @@ dependencies = [
 [[package]]
 name = "dioxus-router"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-cli-config",
  "dioxus-core",
@@ -1327,7 +1330,7 @@ dependencies = [
 [[package]]
 name = "dioxus-router-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "base16",
  "digest",
@@ -1341,7 +1344,7 @@ dependencies = [
 [[package]]
 name = "dioxus-rsx"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "proc-macro2",
  "proc-macro2-diagnostics",
@@ -1352,7 +1355,7 @@ dependencies = [
 [[package]]
 name = "dioxus-server"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -1409,7 +1412,7 @@ dependencies = [
 [[package]]
 name = "dioxus-signals"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "futures-channel",
@@ -1424,7 +1427,7 @@ dependencies = [
 [[package]]
 name = "dioxus-ssr"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "askama_escape",
  "dioxus-core",
@@ -1435,7 +1438,7 @@ dependencies = [
 [[package]]
 name = "dioxus-stores"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-core",
  "dioxus-signals",
@@ -1445,7 +1448,7 @@ dependencies = [
 [[package]]
 name = "dioxus-stores-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "convert_case 0.8.0",
  "proc-macro2",
@@ -1456,7 +1459,7 @@ dependencies = [
 [[package]]
 name = "dioxus-web"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dioxus-cli-config",
  "dioxus-core",
@@ -2026,7 +2029,7 @@ dependencies = [
 [[package]]
 name = "generational-box"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "parking_lot",
  "tracing",
@@ -2048,6 +2051,7 @@ version = "0.1.0"
 dependencies = [
  "dioxus",
  "dioxus-mobile-geolocation",
+ "gloo-timers",
 ]
 
 [[package]]
@@ -2790,7 +2794,7 @@ dependencies = [
 [[package]]
 name = "lazy-js-bundle"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 
 [[package]]
 name = "lazy_static"
@@ -2960,7 +2964,7 @@ dependencies = [
 [[package]]
 name = "manganis"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "manganis-core",
@@ -2970,7 +2974,7 @@ dependencies = [
 [[package]]
 name = "manganis-core"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "dioxus-cli-config",
@@ -2981,7 +2985,7 @@ dependencies = [
 [[package]]
 name = "manganis-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "dunce",
  "macro-string",
@@ -3521,7 +3525,7 @@ checksum = "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220"
 [[package]]
 name = "permissions"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "permissions-core",
@@ -3531,7 +3535,7 @@ dependencies = [
 [[package]]
 name = "permissions-core"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "const-serialize-macro",
@@ -3541,7 +3545,7 @@ dependencies = [
 [[package]]
 name = "permissions-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "permissions-core",
@@ -3711,7 +3715,7 @@ checksum = "7edddbd0b52d732b21ad9a5fab5c704c14cd949e5e9a1ec5929a24fded1b904c"
 [[package]]
 name = "platform-bridge-macro"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "const-serialize",
  "const-serialize-macro",
@@ -4677,7 +4681,7 @@ dependencies = [
 [[package]]
 name = "subsecond"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "js-sys",
  "libc",
@@ -4695,7 +4699,7 @@ dependencies = [
 [[package]]
 name = "subsecond-types"
 version = "0.7.0-rc.3"
-source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#133ea992d542ad61ce832a02fb003bc9f47776fd"
+source = "git+https://github.com/wheregmis/dioxus.git?branch=native_api_testing#5bcce4ec0084a97d20d866c42c4507dd14831898"
 dependencies = [
  "serde",
 ]

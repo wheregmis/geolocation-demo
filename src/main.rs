@@ -16,9 +16,13 @@
 //! ```
 
 use dioxus::prelude::*;
-use std::time::Duration;
 
-#[cfg(any(target_os = "android", target_os = "ios", target_os = "macos"))]
+#[cfg(any(
+    target_os = "android",
+    target_os = "ios",
+    target_os = "macos",
+    target_family = "wasm"
+))]
 use dioxus_mobile_geolocation::{last_known_location, request_location_permission};
 
 fn main() {
@@ -86,7 +90,14 @@ fn app() -> Element {
                     onclick: move |_| {
                         is_loading.set(true);
                         status_message.set("Getting location...".to_string());
-                        #[cfg(any(target_os = "android", target_os = "ios", target_os = "macos"))]
+                        #[cfg(
+                            any(
+                                target_os = "android",
+                                target_os = "ios",
+                                target_os = "macos",
+                                target_family = "wasm"
+                            )
+                        )]
                         {
                             println!("Attempting to get location...");
                             match last_known_location() {
@@ -105,7 +116,13 @@ fn app() -> Element {
                                             );
                                         spawn(async move {
                                             for attempt in 1..=10 {
-                                                std::thread::sleep(Duration::from_millis(500));
+                                                #[cfg(target_family = "wasm")]
+                                                gloo_timers::future::sleep(
+                                                        std::time::Duration::from_millis(500),
+                                                    )
+                                                    .await;
+                                                #[cfg(not(target_family = "wasm"))]
+                                                std::thread::sleep(std::time::Duration::from_millis(500));
                                                 println!("Retry attempt {} to get location...", attempt);
                                                 if let Some((lat, lon)) = last_known_location() {
                                                     println!(
@@ -138,9 +155,18 @@ fn app() -> Element {
                                 }
                             }
                         }
-                        #[cfg(not(any(target_os = "android", target_os = "ios")))]
+                        #[cfg(
+                            not(
+                                any(
+                                    target_os = "android",
+                                    target_os = "ios",
+                                    target_os = "macos",
+                                    target_family = "wasm"
+                                )
+                            )
+                        )]
                         {
-                            status_message.set("Geolocation only works on Android/iOS".to_string());
+                            status_message.set("Geolocation not supported on this platform".to_string());
                             is_loading.set(false);
                         }
                     },
@@ -176,9 +202,10 @@ fn app() -> Element {
                     p { class: "info-title", "How it works" }
                     ul { class: "info-list",
                         li { "Android: Uses LocationManager.getLastKnownLocation() via Kotlin shim" }
-                        li { "iOS: Uses CoreLocation via Swift shim" }
+                        li { "iOS/macOS: Uses CoreLocation via Swift shim" }
+                        li { "Web: Uses browser Geolocation API via JavaScript" }
                         li {
-                            "Permissions: Automatically checked by Kotlin/Swift shims before accessing location"
+                            "Permissions: Automatically checked by platform-specific shims before accessing location"
                         }
                         li { "First time: You'll be prompted to grant location permission" }
                     }
@@ -212,6 +239,17 @@ fn platform_name() -> &'static str {
     #[cfg(target_os = "ios")]
     return "🍎 iOS";
 
-    #[cfg(not(any(target_os = "android", target_os = "ios")))]
+    #[cfg(target_os = "macos")]
+    return "🍎 macOS";
+
+    #[cfg(target_family = "wasm")]
+    return "🌐 Web";
+
+    #[cfg(not(any(
+        target_os = "android",
+        target_os = "ios",
+        target_os = "macos",
+        target_family = "wasm"
+    )))]
     return "💻 Desktop (location not supported)";
 }
