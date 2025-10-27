@@ -18,7 +18,7 @@
 use dioxus::prelude::*;
 use std::time::Duration;
 
-#[cfg(any(target_os = "android", target_os = "ios"))]
+#[cfg(any(target_os = "android", target_os = "ios", target_os = "macos"))]
 use dioxus_mobile_geolocation::{last_known_location, request_location_permission};
 
 fn main() {
@@ -33,7 +33,6 @@ fn app() -> Element {
 
     rsx! {
         style { {include_str!("./assets/mobile_geolocation.css")} }
-        
         div { class: "container",
             // Header
             div { class: "header",
@@ -42,9 +41,7 @@ fn app() -> Element {
             }
 
             // Platform indicator
-            div { class: "platform-badge",
-                {platform_name()}
-            }
+            div { class: "platform-badge", {platform_name()} }
 
             // Status card
             div { class: "status-card",
@@ -64,17 +61,14 @@ fn app() -> Element {
             if let Some((lat, lon)) = location() {
                 div { class: "location-card",
                     h2 { "Current Location" }
-                    
                     div { class: "coordinate-row",
                         span { class: "label", "Latitude:" }
                         span { class: "value", "{lat:.6}°" }
                     }
-                    
                     div { class: "coordinate-row",
                         span { class: "label", "Longitude:" }
                         span { class: "value", "{lon:.6}°" }
                     }
-                    
                     a {
                         class: "map-link",
                         href: "https://www.google.com/maps?q={lat},{lon}",
@@ -92,13 +86,9 @@ fn app() -> Element {
                     onclick: move |_| {
                         is_loading.set(true);
                         status_message.set("Getting location...".to_string());
-                        
-                        // Get location
-                        #[cfg(any(target_os = "android", target_os = "ios"))]
+                        #[cfg(any(target_os = "android", target_os = "ios", target_os = "macos"))]
                         {
                             println!("Attempting to get location...");
-                            
-                            // First try to get location directly
                             match last_known_location() {
                                 Some((lat, lon)) => {
                                     println!("Location retrieved: lat={}, lon={}", lat, lon);
@@ -108,44 +98,46 @@ fn app() -> Element {
                                 }
                                 None => {
                                     println!("No location available - requesting permissions...");
-                                    
-                                    // Request permissions
                                     if request_location_permission() {
-                                        status_message.set("Permission requested. Checking for location...".to_string());
-                                        
-                                        // Use spawn to retry in the background
+                                        status_message
+                                            .set(
+                                                "Permission requested. Checking for location...".to_string(),
+                                            );
                                         spawn(async move {
-                                            // Try multiple times with delays
                                             for attempt in 1..=10 {
                                                 std::thread::sleep(Duration::from_millis(500));
                                                 println!("Retry attempt {} to get location...", attempt);
-                                                
-                                                match last_known_location() {
-                                                    Some((lat, lon)) => {
-                                                        println!("Location retrieved on retry: lat={}, lon={}", lat, lon);
-                                                        location.set(Some((lat, lon)));
-                                                        status_message.set("Location retrieved successfully!".to_string());
-                                                        is_loading.set(false);
-                                                        return;
-                                                    }
-                                                    None => {
-                                                        // Continue retrying
-                                                    }
+                                                if let Some((lat, lon)) = last_known_location() {
+                                                    println!(
+                                                        "Location retrieved on retry: lat={}, lon={}",
+                                                        lat,
+                                                        lon,
+                                                    );
+                                                    location.set(Some((lat, lon)));
+                                                    status_message
+                                                        .set("Location retrieved successfully!".to_string());
+                                                    is_loading.set(false);
+                                                    return;
                                                 }
                                             }
-                                            
-                                            // If we get here, all retries failed
-                                            status_message.set("Could not get location. Please ensure you granted permission and location services are enabled, then try again.".to_string());
+                                            status_message
+                                                .set(
+                                                    "Could not get location. Please ensure you granted permission and location services are enabled, then try again."
+                                                        .to_string(),
+                                                );
                                             is_loading.set(false);
                                         });
                                     } else {
-                                        status_message.set("Failed to request permissions. Please check your device settings and ensure location services are enabled.".to_string());
+                                        status_message
+                                            .set(
+                                                "Failed to request permissions. Please check your device settings and ensure location services are enabled."
+                                                    .to_string(),
+                                            );
                                         is_loading.set(false);
                                     }
                                 }
                             }
                         }
-                        
                         #[cfg(not(any(target_os = "android", target_os = "ios")))]
                         {
                             status_message.set("Geolocation only works on Android/iOS".to_string());
@@ -158,7 +150,6 @@ fn app() -> Element {
                         "📍 Get My Location"
                     }
                 }
-                
                 if location().is_some() {
                     button {
                         class: "btn btn-secondary",
@@ -174,7 +165,6 @@ fn app() -> Element {
             // Info section
             div { class: "info-section",
                 h3 { "ℹ️ About" }
-                
                 div { class: "info-item",
                     p { class: "info-title", "Permissions" }
                     p { class: "info-text",
@@ -182,23 +172,25 @@ fn app() -> Element {
                         "Permissions are automatically embedded and injected into platform manifests."
                     }
                 }
-                
                 div { class: "info-item",
                     p { class: "info-title", "How it works" }
                     ul { class: "info-list",
                         li { "Android: Uses LocationManager.getLastKnownLocation() via Kotlin shim" }
                         li { "iOS: Uses CoreLocation via Swift shim" }
-                        li { "Permissions: Automatically checked by Kotlin/Swift shims before accessing location" }
+                        li {
+                            "Permissions: Automatically checked by Kotlin/Swift shims before accessing location"
+                        }
                         li { "First time: You'll be prompted to grant location permission" }
                     }
                 }
-                
                 div { class: "info-item",
                     p { class: "info-title", "Troubleshooting" }
                     ul { class: "info-list",
                         li { "Make sure location services are enabled in device settings" }
                         li { "Grant location permission when the system dialog appears" }
-                        li { "If permission was denied, go to Settings > Apps > Geolocation Demo > Permissions" }
+                        li {
+                            "If permission was denied, go to Settings > Apps > Geolocation Demo > Permissions"
+                        }
                         li { "Try using Maps app first to get an initial location fix on the device" }
                     }
                 }
@@ -216,11 +208,10 @@ fn app() -> Element {
 fn platform_name() -> &'static str {
     #[cfg(target_os = "android")]
     return "🤖 Android";
-    
+
     #[cfg(target_os = "ios")]
     return "🍎 iOS";
-    
+
     #[cfg(not(any(target_os = "android", target_os = "ios")))]
     return "💻 Desktop (location not supported)";
 }
-
